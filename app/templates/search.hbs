@@ -1,0 +1,7 @@
+{{input value = nome}}
+<button {{action 'search'}}>BUSCAR</button>
+
+{{#each model as |person|}}
+	{{person.nome}}
+{{/each}}
+{{outlet}}
