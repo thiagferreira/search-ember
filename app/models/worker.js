@@ -6,5 +6,6 @@ export default Model.extend({
 	divisao: attr('string'),
 	email: attr('string'),
 	emailPessoal: attr('string'),
-	localFisico: attr('string')
+	localFisico: attr('string'),
+	ramal: attr('string')
 });
