@@ -8,11 +8,11 @@ export default Ember.Route.extend({
 
 	buscaPorNome: function(nome) {
 		return new Ember.RSVP.Promise(function(resolve, reject){
-			Ember.$.get('https://cors-anywhere.herokuapp.com/104.41.15.24/QuemQuem.Api/api/Worker?name=' + nome).then(function(results){
+			Ember.$.get('http://104.41.15.24/QuemQuem.Api/api/Worker?name=' + nome).then(function(results){
 				console.log(results.Contato);
 				resolve(results.Contato);
-			},function(erro){
-				reject(error);
+			},function(results){
+				alert(results.responseText);
 			});
 		});
 	},
@@ -31,7 +31,9 @@ export default Ember.Route.extend({
 							divisao: item.Divisao,
 							email: item.Email,
 							emailPessoal:  item.EmailPessoal,
-							localFisico:  item.LocalFisico
+							localFisico:  item.LocalFisico,
+							ramal: item.Ramal,
+							divModal: item.Nome.dasherize()
 						}
 					};
 					self.store.push({data: worker});

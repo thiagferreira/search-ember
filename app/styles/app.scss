@@ -1,0 +1,27 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+
+table{
+	margin-top: 20px;
+}
+
+#title {
+	margin: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.table {
+	border: 1px solid #CCCCCC;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+
+.person-image {
+	width:185px;
+	height:185px;
+}
+
+.modal-body .row .col-md-7 {
+	margin-top: 15px;
+}
