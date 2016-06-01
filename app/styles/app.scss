@@ -1,6 +1,10 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
+*{
+	color: #557521;
+}
+
 table{
 	margin-top: 20px;
 }
@@ -9,12 +13,82 @@ table{
 	margin: 20px;
 	font-size: 18px;
 	font-weight: bold;
+	text-transform: uppercase;
+
+}
+
+.btn-default {
+    background-image: -webkit-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: -o-linear-gradient(top,#fff 0,#e0e0e0 100%);
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFE0E0E0', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    text-shadow: 0 1px 0 #fff !important;
+    border-color: #ccc;
+    color: #719e0d;
+    background-color: #fff;
+}
+
+.btn-danger, .btn-default, .btn-info, .btn-primary, .btn-success, .btn-warning {
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075);
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:visited {
+    color: #557521;
+    border-color: #557521 ;
+}
+
+.btn-default:dropdown{
+	background-image: none;
+	color: white;
+}
+
+
+.form-control, output {
+    color: #779b3c;
+    background-color: #e3e3e3;
+}
+
+
+::-webkit-input-placeholder {
+   color: #779b3c !important;
+}
+
+:-moz-placeholder {
+   color: #779b3c !important;
+}
+
+::-moz-placeholder {
+	color: #779b3c !important;
+}
+
+:-ms-input-placeholder {  
+   color: #779b3c !important;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #6f8944;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-top: 1px solid #6f8944;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background-color: #eeeeee;
 }
 
 .table {
-	border: 1px solid #CCCCCC;
     margin-top: 25px;
     border-radius: 5px;
+}
+
+.table thead tr th {
+	text-transform: uppercase;
 }
 
 .person-image {
@@ -24,4 +98,17 @@ table{
 
 .modal-body .row .col-md-7 {
 	margin-top: 15px;
+}
+
+.btn-name {
+	color: #779b3c;
+	cursor: pointer;
+}
+
+.btn-name:hover {
+	color: #779b3c;
+}
+
+.btn-sigin a button{
+	float: right;
 }

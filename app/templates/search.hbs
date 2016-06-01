@@ -1,5 +1,5 @@
 <div class="col-lg-12 text-center">
-	<div id="title">Procura de Funcionários Secretaria do Meio Ambiente</div>
+	<div id="title">Colaboradores</div>
 </div>
 
 <div class="container">
@@ -21,7 +21,7 @@
 					<tr> 
 						<th>Nome</th> 
 						<th>Divisão</th> 
-						<th>Email</th> 
+						<th>E-mail</th> 
 						<th>Ramal</th>
 					</tr> 
 				</thead> 
@@ -29,7 +29,7 @@
 				<tbody>
 					{{#each model as |person|}} 
 					<tr> 
-						<th scope="row"><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#{{person.divModal}}">{{person.nome}}</button></th> 
+						<th scope="row"><a data-toggle="modal" class="btn-name"data-target="#{{person.divModal}}">{{person.nome}}</a></th> 
 						<td>{{person.divisao}}</td> 
 						<td>{{person.email}}</td> 						 
 						<td>{{person.ramal}}</td>
@@ -48,18 +48,17 @@
 					      	<div class="row">
 					        	<div class="col-md-4"><img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif" alt="Funcionario" class="person-image"></div>
 					          
-					          	<div class="col-md-7"><span>Divisão: {{person.divisao}}</span></div>
-					          	<div class="col-md-7"><span>Email: {{person.email}}</span></div>
-					          	<div class="col-md-7"><span>Ramal: {{person.ramal}}</span></div>
-					          	<div class="col-md-7"><span>Email Pessoal: {{person.emailPessoal}}</span></div>
-					          	<div class="col-md-7"><span>Local Fisico: {{person.localFisico}}</span></div>
+					          	<div class="col-md-7"><span>DIVISÃO: {{person.divisao}}</span></div>
+					          	<div class="col-md-7"><span>RAMAL: {{person.ramal}}</span></div>
+					          	<div class="col-md-7"><span>E-MAIL: {{person.email}}</span></div>
+					          	<div class="col-md-7"><span>E-MAIL PESSOAL: {{person.emailPessoal}}</span></div>
+					          	<div class="col-md-7"><span>LOCAL FÍSICO: {{person.localFisico}}</span></div>
 					          
 					        </div>
 
 					      </div>
 					      <div class="modal-footer">
 					        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					        <a href="http://10.25.192.114:8080/sipweb/trabalhador/login.xhtml" target="_blank"><button type="button" class="btn btn-primary">Alterar Cadastro</button></a>
 					      </div>
 					    </div>
 					  </div>
@@ -68,9 +67,10 @@
 					{{/each}}
 				</tbody> 
 			</table>
+
 		</div>
 		{{/if}}
-		{{erro}}
+		<div class="col-lg-12 btn-sigin"><a href="http://10.25.192.114:8080/sipweb/trabalhador/login.xhtml" target="_blank"><button type="button" class="btn btn-default">Alterar meu cadastro</button></a></div>
 	</div>	
 </div>
 
