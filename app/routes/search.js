@@ -33,7 +33,8 @@ export default Ember.Route.extend({
 							emailPessoal:  item.EmailPessoal,
 							localFisico:  item.LocalFisico,
 							ramal: item.Ramal,
-							divModal: item.Nome.dasherize()
+							divModal: item.Nome.dasherize(),
+							foto: item.Foto
 						}
 					};
 					self.store.push({data: worker});
