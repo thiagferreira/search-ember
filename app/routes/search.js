@@ -46,16 +46,17 @@ export default Ember.Route.extend({
 							nome: item.Nome,
 							divisao: item.Divisao,
 							email: item.Email,
-							emailPessoal:  item.EmailPessoal,
 							localFisico:  item.LocalFisico,
 							ramal: item.Ramal,
-							divModal: item.Nome.dasherize(),
 							foto: item.Foto
 						}
 					};
 					self.store.push({data: worker});
 				});
 			});
+		},
+		openPersonModal: function(person){
+				this.send("openModal", "models/person", person);
+			}
 		}
-	}
 });

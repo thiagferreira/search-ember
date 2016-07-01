@@ -97,6 +97,7 @@ table{
 
 .person-image {
 	max-height:120px;
+	min-height:120px;
 }
 
 .modal-body .row .col-md-7 {
@@ -112,6 +113,31 @@ table{
 	color: #779b3c;
 }
 
-.btn-sigin a button{
+.btn-sign a button{
 	float: right;
+	margin-top: 10px;
+}
+
+.person-modal-overlay{
+	background-color:rgba(0,0,0,0.8);
+	width: 100%; height:100%;
+	position: absolute;
+}
+
+.person-modal {
+	display: block;
+	position: fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+.person-modal-content {
+	background: white;
+}
+
+.modal {
+	display: block;
+	background-color:rgba(0,0,0,0.8); 
 }

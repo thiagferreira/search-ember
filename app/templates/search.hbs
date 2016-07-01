@@ -3,7 +3,7 @@
 		<div class="col-lg-12 text-center">
 			<form class="form-inline">
 				<div class="form-group">
-					{{input value = nome placeholder="Nome do funcionário" class="form-control"}}
+					{{input value = nome placeholder="Nome" class="form-control"}}
 					{{input value = divisao placeholder="Área" class="form-control"}}
 				</div>
 				<button type="submit" class="btn btn-default"{{action 'search'}}>BUSCAR</button>
@@ -26,56 +26,18 @@
 				<tbody>
 					{{#each model as |person|}}
 					<tr>
-						<th scope="row"><a data-toggle="modal" class="btn-name"data-target="#{{person.divModal}}">{{person.nome}}</a></th>
+						<th scope="row"><a data-toggle="modal" class="btn-name"{{action "openPersonModal" person}}>{{person.nome}}</a></th>
 						<td>{{person.divisao}}</td>
 						<td>{{person.email}}</td>
 						<td>{{person.ramal}}</td>
 					</tr>
-
-					<!--modal-->
-					<div class="modal fade" id="{{person.divModal}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-					  <div class="modal-dialog" role="document">
-					    <div class="modal-content">
-					      <div class="modal-header">
-					        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					        <h4 class="modal-title" id="myModalLabel">{{person.nome}}</h4>
-					      </div>
-					      <div class="modal-body">
-
-					      	<div class="row">
-											{{#if person.foto}}
-						        		<div class="col-sm-4 text-center">
-													<img src="data:image/gif;base64,{{person.foto}}" alt="Funcionario" class="person-image">
-												</div>
-											{{else}}
-												<div class="col-sm-4 text-center">
-													<img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif" alt="Funcionario" class="person-image">
-												</div>
-											{{/if}}
-
-					          	<div class="col-md-7"><span>ÁREA: {{person.divisao}}</span></div>
-					          	<div class="col-md-7"><span>RAMAL: {{person.ramal}}</span></div>
-					          	<div class="col-md-7"><span>E-MAIL: {{person.email}}</span></div>
-					          	<div class="col-md-7"><span>E-MAIL PESSOAL: {{person.emailPessoal}}</span></div>
-					          	<div class="col-md-7"><span>PRÉDIO/ANDAR/SALA: {{person.localFisico}}</span></div>
-
-					        </div>
-
-					      </div>
-					      <div class="modal-footer">
-					        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					      </div>
-					    </div>
-					  </div>
-					</div>
-
 					{{/each}}
 				</tbody>
 			</table>
 
 		</div>
 		{{/if}}
-		<div class="col-lg-12 btn-sigin"><a href="http://10.25.192.114:8080/sipweb/trabalhador/login.xhtml" target="_blank"><button type="button" class="btn btn-default">Alterar meu cadastro</button></a></div>
+		<div class="col-lg-12 btn-sign"><a href="http://10.25.192.114:8080/sipweb/trabalhador/login.xhtml" target="_blank"><button type="button" class="btn btn-default">Alterar meu cadastro</button></a></div>
 	</div>
 </div>
 
